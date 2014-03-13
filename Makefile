@@ -1,6 +1,6 @@
 CC = cc
 PREFIX= /usr/pkg
-MANPREFIX= ${PREFIX}/man/man1
+MANPREFIX= ${PREFIX}/man
 
 all:
 	${CC} progress.c progressbar.c -o progress
