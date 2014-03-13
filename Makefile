@@ -1,12 +1,14 @@
 CC = cc
-PREFIX = /usr/bin
+DESTDIR= /usr/pkg
+PREFIX = bin/
+MAN= man/man1/
 
 all:
 	${CC} progress.c progressbar.c -o progress
 
 install:
-	cp progress ${DESTDIR}/bin
-	cp progress.1 /usr/share/man/man1
+	cp progress ${DESTDIR}/${PREFIX}
+	cp progress.1 ${DESTDIR}/${MAN}
 
 clean:
 	rm progress
